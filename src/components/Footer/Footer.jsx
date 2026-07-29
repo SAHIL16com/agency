@@ -25,10 +25,12 @@ function Footer() {
               We craft exceptional digital experiences that help businesses thrive in the modern digital landscape. Our team of experts is dedicated to delivering high-quality solutions.
             </p>
             <div className="social-links">
-              <a href="#" className="social-icon" aria-label="Facebook"></a>
-              <a href="#" className="social-icon font-sans-bold" aria-label="X (Twitter)">𝕏</a>
-              <a href="#" className="social-icon" aria-label="Instagram"></a>
-              <a href="https://wa.me/919582352683" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp"></a>
+              <a href="https://www.instagram.com/petra_web.12/" className="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <img src="/images/instagram.svg" alt="Instagram" className="social-icon-img" />
+              </a>
+              <a href="https://wa.me/919582352683" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
+                <img src="/images/whatsapp.svg" alt="WhatsApp" className="social-icon-img" />
+              </a>
             </div>
           </div>
 
@@ -50,7 +52,6 @@ function Footer() {
               <li><a href="#services">Web Development</a></li>
               <li><a href="#services">Mobile App Development</a></li>
               <li><a href="#services">UI/UX Design</a></li>
-              <li><a href="#services">Custom Software</a></li>
               <li><a href="#services">SEO Services</a></li>
             </ul>
           </div>
@@ -88,8 +89,6 @@ function Footer() {
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">Sitemap</a>
-            <a href="#">AI Directory</a>
           </div>
         </div>
       </div>

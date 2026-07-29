@@ -1,13 +1,13 @@
 .site-footer {
   background-color: var(--bg-secondary);
   color: var(--text-secondary);
-  padding: 80px 0 40px;
+  padding: 60px 0 30px;
   border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 991px) {
   .site-footer {
-    padding: 60px 0 30px;
+    padding: 45px 0 25px;
   }
 }
 
@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
   gap: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 30px;
 }
 
 .footer-col {
@@ -111,11 +111,25 @@
   transition: var(--transition-smooth);
 }
 
+.social-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: var(--transition-smooth);
+  opacity: 0.8;
+}
+
 .social-icon:hover {
   background-color: var(--accent-light);
   border-color: var(--accent);
   color: var(--accent); /* Transitions to premium gold accent */
   transform: translateY(-3px);
+}
+
+.social-icon:hover .social-icon-img {
+  opacity: 1;
+  /* Converts gray to the premium gold accent on hover */
+  filter: brightness(0) saturate(100%) invert(69%) sepia(26%) saturate(1001%) hue-rotate(5deg) brightness(91%) contrast(83%);
 }
 
 .font-sans-bold {
@@ -185,13 +199,13 @@
 
 /* Premium Typographic Watermark */
 .footer-watermark {
-  font-size: 11vw;
+  font-size: 8vw;
   font-weight: 800;
   text-align: center;
   color: var(--text-primary);
   opacity: 0.035;
   letter-spacing: 0.25em;
-  margin: 60px 0 20px;
+  margin: 30px 0 15px;
   user-select: none;
   line-height: 0.9;
   text-transform: uppercase;
@@ -199,8 +213,8 @@
 
 @media (max-width: 768px) {
   .footer-watermark {
-    font-size: 12vw;
-    margin: 40px 0 10px;
+    font-size: 9vw;
+    margin: 20px 0 8px;
   }
 }
 
@@ -208,7 +222,7 @@
 /* Bottom Bar */
 .footer-bottom-bar {
   border-top: 1px solid var(--border-color);
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
