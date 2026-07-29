@@ -1,0 +1,193 @@
+:root {
+  /* Theme colors - default Light (Warm Cream) */
+  --bg-primary: #F4F3EC;
+  --bg-secondary: #FAFAF7;
+  --bg-card: #FFFFFF;
+  
+  --text-primary: #1C1D17;
+  --text-secondary: #585952;
+  --text-muted: #8E8F87;
+  
+  --border-color: rgba(28, 29, 23, 0.08);
+  --border-hover: rgba(28, 29, 23, 0.16);
+  
+  --accent: #C4A054;
+  --accent-hover: #B38E43;
+  --accent-light: rgba(196, 160, 84, 0.08);
+  
+  /* Constant colors for dark sections */
+  --dark-bg: #11120D;
+  --dark-card: #181913;
+  --dark-text-primary: #E5E6DF;
+  --dark-text-secondary: #A6A7A0;
+  --dark-border: rgba(229, 230, 223, 0.08);
+  
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* System Dark Mode / User Override */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-primary: #11120D;
+    --bg-secondary: #0A0A07;
+    --bg-card: #181913;
+    
+    --text-primary: #E5E6DF;
+    --text-secondary: #A6A7A0;
+    --text-muted: #6E6F68;
+    
+    --border-color: rgba(229, 230, 223, 0.08);
+    --border-hover: rgba(229, 230, 223, 0.16);
+    
+    --accent: #D4B064;
+    --accent-hover: #C4A054;
+    --accent-light: rgba(212, 176, 100, 0.12);
+  }
+}
+
+/* Manual Theme Selectors */
+:root[data-theme="dark"] {
+  --bg-primary: #11120D;
+  --bg-secondary: #0A0A07;
+  --bg-card: #181913;
+  
+  --text-primary: #E5E6DF;
+  --text-secondary: #A6A7A0;
+  --text-muted: #6E6F68;
+  
+  --border-color: rgba(229, 230, 223, 0.08);
+  --border-hover: rgba(229, 230, 223, 0.16);
+  
+  --accent: #D4B064;
+  --accent-hover: #C4A054;
+  --accent-light: rgba(212, 176, 100, 0.12);
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #F4F3EC;
+  --bg-secondary: #FAFAF7;
+  --bg-card: #FFFFFF;
+  
+  --text-primary: #1C1D17;
+  --text-secondary: #585952;
+  --text-muted: #8E8F87;
+  
+  --border-color: rgba(28, 29, 23, 0.08);
+  --border-hover: rgba(28, 29, 23, 0.16);
+  
+  --accent: #C4A054;
+  --accent-hover: #B38E43;
+  --accent-light: rgba(196, 160, 84, 0.08);
+}
+
+/* Global Reset & Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+/* Hide Scrollbar for a Clean Look */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Premium Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grid items */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+

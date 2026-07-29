@@ -1,0 +1,393 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(244, 243, 236, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: var(--transition-smooth);
+}
+
+:root[data-theme="dark"] .site-header {
+  background: rgba(17, 18, 13, 0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-header {
+    background: rgba(17, 18, 13, 0.85);
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 40px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px 16px; /* Compact padding for small screens */
+  }
+}
+
+/* Logo icon SVG */
+.logo-icon-svg {
+  width: 32px;
+  height: 32px;
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+  .logo-icon-svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Custom CSS Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.logo-stem {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 20px;
+  background-color: var(--text-primary);
+  transform: skewY(-45deg);
+  border-radius: 1px;
+}
+
+.logo-pw {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  width: 22px;
+  height: 28px;
+}
+
+.logo-loop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border: 4px solid var(--text-primary);
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 8px 8px 0;
+  transform: rotate(0deg);
+}
+
+.logo-w {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 18px;
+  height: 12px;
+}
+
+.w-stroke-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 11px;
+  background-color: var(--text-primary);
+  transform: rotate(-35deg);
+  transform-origin: top left;
+}
+
+.w-stroke-2 {
+  position: absolute;
+  left: 9px;
+  top: 0;
+  width: 4px;
+  height: 11px;
+  background-color: var(--text-primary);
+  transform: rotate(35deg);
+  transform-origin: top right;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--text-primary);
+}
+
+.brand-tagline {
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: var(--transition-smooth);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-hover);
+}
+
+.mobile-only-toggle {
+  display: none; /* Hidden on desktop */
+}
+
+.desktop-only-toggle {
+  display: flex;
+}
+
+.cta-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: var(--accent);
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(196, 160, 84, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.cta-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(196, 160, 84, 0.25);
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+.hamburger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+  transform-origin: left center;
+}
+
+/* Responsive Styles for Tablet & Mobile */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Hamburger Animate to X */
+  .hamburger-menu.open .hamburger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(1px, -1px);
+  }
+
+  .hamburger-menu.open .hamburger-bar:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .hamburger-menu.open .hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(1px, 1px);
+  }
+
+  /* Navigation Menu Drawer */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 290px;
+    height: 100vh;
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow-lg);
+    padding: 90px 32px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0; /* Gap managed via items borders and padding */
+    transition: var(--transition-smooth);
+    z-index: 1005;
+    border-left: 1px solid var(--border-color);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: block;
+    transition: var(--transition-smooth);
+  }
+
+  .nav-item:hover {
+    color: var(--accent);
+    padding-left: 4px;
+  }
+
+  .nav-item::after {
+    display: none; /* Hide hover underline effect on mobile */
+  }
+
+  /* Adjust header CTA sizing on smaller screens */
+  .header-cta {
+    display: none; /* Hide header WhatsApp button on small mobile and rely on Hero or sticky float */
+  }
+
+  .desktop-only-toggle {
+    display: none; /* Hide desktop toggle from header */
+  }
+
+  .mobile-only-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--accent);
+    color: #FFFFFF;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(196, 160, 84, 0.2);
+    transition: var(--transition-smooth);
+  }
+
+  .mobile-only-toggle:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .header-actions {
+    gap: 14px;
+  }
+}
+
+/* Backdrop Blur Overlay */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1004;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 15px;
+    letter-spacing: 0.12em;
+  }
+  
+  .brand-tagline {
+    font-size: 7px;
+    letter-spacing: 0.15em;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+}
+

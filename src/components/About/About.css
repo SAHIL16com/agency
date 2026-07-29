@@ -1,0 +1,241 @@
+.about-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary);
+}
+
+@media (max-width: 991px) {
+  .about-section {
+    padding: 60px 0;
+  }
+}
+
+/* Header styling */
+.about-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.about-main-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.accent-bar {
+  height: 4px;
+  width: 48px;
+  background-color: var(--accent);
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+.about-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Grid Layout */
+.about-grid-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .about-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+/* Left Column */
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-vision-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.about-vision-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* 2x2 grid */
+.about-features-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .about-features-2x2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.about-feature-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.about-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.feature-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Specific colors matching the reference design (earthy, aesthetic tones) */
+.check-blue {
+  background-color: #FAF7F2; /* Warm sand */
+}
+
+.light-purple {
+  background-color: #FAF5F2; /* Light terracotta */
+}
+
+.group-pink {
+  background-color: #F0F2EB; /* Muted olive */
+}
+
+.green-shield {
+  background-color: #EEF1F2; /* Soft slate */
+}
+
+.feature-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.feature-card-text {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Right Column & Gradient Card */
+.about-right-col {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.about-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.decor-circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #EAE5DB; /* Soft sand decoration */
+  opacity: 0.8;
+  left: 40px;
+  top: 10px;
+  z-index: 1;
+}
+
+.decor-square {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background-color: #DFDCD6; /* Terracotta gray decoration */
+  opacity: 0.9;
+  right: 50px;
+  bottom: 20px;
+  z-index: 1;
+  transform: rotate(15deg);
+}
+
+.team-gradient-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1.1 / 1;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, #B38E43 0%, #C4A054 50%, #E2B870 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(179, 142, 67, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.team-gradient-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(179, 142, 67, 0.25);
+}
+
+.team-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.team-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.team-card-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+  max-width: 240px;
+}

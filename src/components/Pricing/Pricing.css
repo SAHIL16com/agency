@@ -1,0 +1,289 @@
+.pricing-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary);
+}
+
+@media (max-width: 991px) {
+  .pricing-section {
+    padding: 60px 0;
+  }
+}
+
+.pricing-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.pricing-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.pricing-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+@media (max-width: 991px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+}
+
+.pricing-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color); /* 2px width to prevent layout shifts */
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+  cursor: pointer; /* Clickable card pointer feedback */
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent); /* Shows gold accent border on hover */
+}
+
+/* Highlights popular standard card */
+.popular-card {
+  border: 2px solid var(--border-color); /* Matches other cards initially */
+  transform: scale(1.03);
+}
+
+.popular-card:hover {
+  transform: scale(1.03) translateY(-8px);
+  border-color: var(--accent); /* Shows gold accent border on hover */
+}
+
+@media (max-width: 991px) {
+  .popular-card, .popular-card:hover {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Dark enterprise card */
+.dark-card {
+  background-color: #0B0F19; /* Dark midnight navy */
+  color: #E2E8F0;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-card:hover {
+  border-color: var(--accent); /* Shows gold accent border on hover */
+}
+
+.dark-card .plan-name,
+.dark-card .plan-price {
+  color: #FFFFFF;
+}
+
+.dark-card .plan-desc,
+.dark-card .plan-period {
+  color: #94A3B8;
+}
+
+.dark-card .feature-text {
+  color: #E2E8F0;
+}
+
+/* Badge for popular plan */
+.card-badge-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+}
+
+.card-badge {
+  background-color: var(--accent); /* Elegant gold badge */
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.popular-card .plan-name {
+  margin-top: 24px;
+}
+
+.plan-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  min-height: 42px;
+}
+
+/* Price block */
+.plan-price-wrapper {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.plan-price {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--accent); /* Dynamic accent color */
+  letter-spacing: -0.02em;
+}
+
+.dark-card .plan-price {
+  color: #FFFFFF;
+}
+
+.plan-period {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 6px;
+}
+
+.popular-card .plan-period {
+  display: block;
+  margin-left: 0;
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* Features block */
+.features-container {
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+  margin-bottom: 40px;
+}
+
+.dark-card .features-container {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.features-intro {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dark-card .features-intro {
+  color: #FFFFFF;
+}
+
+.plan-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.check-icon {
+  color: var(--accent); /* Accent check icon */
+  font-size: 15px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.dark-card .check-icon {
+  color: var(--accent);
+}
+
+.feature-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Actions styling */
+.card-action-wrapper {
+  width: 100%;
+}
+
+.plan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+/* Base button */
+.base-btn {
+  background-color: var(--accent-light); /* Soft accent */
+  color: var(--accent); /* Accent text */
+}
+
+.base-btn:hover {
+  background-color: rgba(196, 160, 84, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Popular gradient button */
+.popular-btn {
+  background: linear-gradient(135deg, #B38E43 0%, #E2B870 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(179, 142, 67, 0.25);
+}
+
+.popular-btn:hover {
+  background: linear-gradient(135deg, #A27D32 0%, #D4B064 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(179, 142, 67, 0.35);
+}
+
+/* Dark card button */
+.dark-btn {
+  background-color: var(--accent);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px var(--accent-light);
+}
+
+.dark-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(179, 142, 67, 0.25);
+}
