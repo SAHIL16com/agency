@@ -162,7 +162,7 @@ function Contact() {
                   <span className="detail-icon">✉</span>
                   <div className="detail-content">
                     <span className="detail-label">Email us</span>
-                    <a href="mailto:sahilkumar55126@gmail.com" className="detail-value">sahilkumar55126@gmail.com</a>
+                    <a href="mailto:petraweb00@gmail.com" className="detail-value">petraweb00@gmail.com</a>
                   </div>
                 </div>
                 <div className="detail-item">
