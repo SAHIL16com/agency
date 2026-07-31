@@ -58,6 +58,7 @@ function Contact() {
         setErrorMessage(result.message || "Something went wrong. Please try again.");
       }
     } catch (error) {
+      console.error("Submission error:", error);
       setErrorMessage("Network error. Please try again later.");
     } finally {
       setSubmitting(false);

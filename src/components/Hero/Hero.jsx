@@ -40,7 +40,7 @@ function Hero() {
             <span className="hero-badge">CREATIVE TECH & MARKETING AGENCY</span>
             <h1 className="hero-title">
               <span className="title-row">
-                {splitText("Building ")} 
+                {splitText("Petra Web ")} 
                 <span className="script-text hero-title-script">Experiences</span>
               </span>
               <br />
