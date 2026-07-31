@@ -52,7 +52,7 @@ function Hero() {
             
             <div className="hero-actions">
               <a href="https://wa.me/919582352683?text=Hi%20Petra%20Web,%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" className="btn-primary">Start Your Project</a>
-              <a href="#work" className="btn-secondary">View Our Work</a>
+              <a href="#services" className="btn-secondary">View Our Work</a>
             </div>
           </div>
 

@@ -65,6 +65,7 @@ function Testimonials() {
                       src={review.img} 
                       alt={review.author} 
                       className="author-avatar" 
+                      loading="lazy"
                     />
                     <div className="author-details">
                       <h4 className="author-name">{review.author}</h4>
