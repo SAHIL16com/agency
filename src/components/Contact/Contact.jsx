@@ -171,7 +171,7 @@ function Contact() {
                   <div className="detail-content">
                     <span className="detail-label">Call us</span>
                     <a href="tel:+919582352683" className="detail-value">+91 9582352683</a>
-                    <a href="tel:+917835840956" className="detail-value" style={{ display: 'block', marginTop: '4px' }}>+91 7835840956</a>
+                    <a href="tel:+917827881336" className="detail-value" style={{ display: 'block', marginTop: '4px' }}>+91 7827881336</a>
                   </div>
                 </div>
                 <div className="detail-item">
