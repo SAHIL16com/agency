@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Link
-Sitemap: https://peetraweb.in/sitemap.xml
+Sitemap: https://www.petraweb.in/sitemap.xml
