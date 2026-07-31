@@ -31,6 +31,9 @@ function Footer() {
               <a href="https://wa.me/919582352683" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
                 <img src="/images/whatsapp.svg" alt="WhatsApp" className="social-icon-img" />
               </a>
+              <a href="https://www.linkedin.com/in/petra-web-636018426/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+                <img src="/images/linkedin.svg" alt="LinkedIn" className="social-icon-img" />
+              </a>
             </div>
           </div>
 

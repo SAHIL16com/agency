@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
-  <!-- PW Monogram in white fill for favicon -->
-  <g fill="#FFFFFF">
+  <!-- Background Circle (Dark Charcoal) -->
+  <circle cx="60" cy="60" r="60" fill="#11120D" />
+  
+  <!-- PW Monogram centered and scaled inside the circle -->
+  <g fill="#C4A054" transform="translate(60, 60) scale(0.7) translate(-67.75, -52.25)">
     <!-- Left Vertical Stem -->
     <path d="M 28 35.5 L 37.5 26 L 37.5 68.5 L 28 78 Z" />
     
