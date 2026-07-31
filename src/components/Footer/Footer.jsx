@@ -28,7 +28,7 @@ function Footer() {
               <a href="https://www.instagram.com/petra_web.12/" className="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <img src="/images/instagram.svg" alt="Instagram" className="social-icon-img" />
               </a>
-              <a href="https://wa.me/919582352683" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
+              <a href="https://wa.me/917827881336" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
                 <img src="/images/whatsapp.svg" alt="WhatsApp" className="social-icon-img" />
               </a>
               <a href="https://www.linkedin.com/in/petra-web-636018426/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
