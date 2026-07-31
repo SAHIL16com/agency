@@ -107,26 +107,27 @@
 
 /* Button overrides for dark hero */
 .hero-section .btn-primary {
-  background-color: #FFFFFF;
+  background: linear-gradient(135deg, #C4A054 0%, #E2B870 100%);
   color: #0A0B0D;
-  font-weight: 600;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px rgba(196, 160, 84, 0.25);
+  border: none;
 }
 
 .hero-section .btn-primary:hover {
-  background-color: #F3F4F6;
+  background: linear-gradient(135deg, #B38E43 0%, #D4B064 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(196, 160, 84, 0.35);
 }
 
 .hero-section .btn-secondary {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
 }
 
 .hero-section .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: #FFFFFF;
+  transform: translateY(-2px);
 }
 
 /* Testimonial Widget */
