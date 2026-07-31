@@ -74,7 +74,7 @@ function Footer() {
                 <span className="contact-text-value">
                   <a href="tel:+919582352683" style={{ color: 'inherit' }}>+91 9582352683</a>
                   <span style={{ display: 'block', marginTop: '4px' }}>
-                    <a href="tel:+917835840956" style={{ color: 'inherit' }}>+91 7835840956</a>
+                    <a href="tel:+917827881336" style={{ color: 'inherit' }}>+91 7827881336</a>
                   </span>
                 </span>
               </div>
