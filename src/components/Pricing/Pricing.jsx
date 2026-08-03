@@ -75,7 +75,7 @@ function Pricing() {
               onClick={() => {
                 const url = plan.dark 
                   ? "#contact" 
-                  : "https://wa.me/919582352683?text=Hi%20Petra%20Web,%20I%20want%20to%20know%20more%20about%20the%20" + encodeURIComponent(plan.name);
+                  : "https://wa.me/917827881336?text=Hi%20Petra%20Web,%20I%20want%20to%20know%20more%20about%20the%20" + encodeURIComponent(plan.name);
                 if (plan.dark) {
                   const contactSec = document.getElementById('contact');
                   if (contactSec) {
